@@ -1,4 +1,5 @@
 const toggle = document.getElementById("toggleB");
+toggle.checked = true;
 const basicPriceElement = document.getElementById("basicPrice");
 const proffesionalPriceElement = document.getElementById("proffesionalPrice");
 const masterPriceElement = document.getElementById("masterPrice");
@@ -20,7 +21,7 @@ const setPrices = (prices) => {
   masterPriceElement.innerText = prices.master;
 };
 
-setPrices(annuallyPrices);
+setPrices(monthlyPrices);
 
 const hanndleClick = (e) => {
   toggle.checked ? setPrices(monthlyPrices) : setPrices(annuallyPrices);
